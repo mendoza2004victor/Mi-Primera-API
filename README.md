@@ -141,3 +141,75 @@ tarea6-api/
 │  └─ app.module.ts
 ├─ package.json
 └─ README.md
+
+Detalle de la Implementación
+1️⃣ Entidad: Producto
+
+Define la estructura de los productos con tres campos:
+
+id: number → Identificador único
+
+nombre: string → Nombre del producto
+
+precio: number → Precio del producto
+
+Archivo: src/productos/entities/producto.entity.ts
+
+2️⃣ DTOs (Data Transfer Objects)
+a) CreateProductoDto
+
+Define los datos requeridos para crear un producto.
+
+Validaciones:
+
+nombre: string obligatorio
+
+precio: número obligatorio, mínimo 0
+
+Archivo: src/productos/dto/create-producto.dto.ts
+
+b) UpdateProductoDto
+
+Permite actualizar campos de manera parcial.
+
+Extiende de CreateProductoDto usando PartialType.
+
+Archivo: src/productos/dto/update-producto.dto.ts
+
+3️⃣ Service: ProductosService
+
+Maneja la lógica de negocio.
+
+Almacena los productos en un array en memoria.
+
+Funcionalidades:
+
+create(dto: CreateProductoDto) → Crear un producto
+
+findAll() → Listar todos los productos
+
+findOne(id: number) → Buscar un producto por ID
+
+update(id: number, dto: UpdateProductoDto) → Actualizar un producto
+
+remove(id: number) → Eliminar un producto
+
+Archivo: src/productos/productos.service.ts
+
+4️⃣ Controller: ProductosController
+
+Recibe las peticiones HTTP y llama al servicio para procesarlas.
+
+Endpoints:
+
+POST /productos → Crear producto
+
+GET /productos → Listar todos
+
+GET /productos/:id → Ver producto por ID
+
+PATCH /productos/:id → Actualizar producto
+
+DELETE /productos/:id → Eliminar producto
+
+Archivo: src/productos/productos.controller.ts
