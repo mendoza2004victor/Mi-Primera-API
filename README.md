@@ -77,6 +77,17 @@ Archivo: src/productos/productos.service.ts
 - DELETE /productos/:id → Eliminar producto
 
 Archivo: src/productos/productos.controller.ts
+## ✅ Conclusión
+
+- Con este proyecto se logra:
+
+- Comprender la separación de responsabilidades con arquitectura por capas en NestJS.
+
+- Implementar un CRUD completo para un recurso.
+
+- Validar datos usando DTOs y class-validator.
+
+- Probar endpoints con Postman o Insomnia sin necesidad de base de datos.
 
 ## 📁 Estructura del Proyecto
 
@@ -94,4 +105,6 @@ tarea6-api/
 │  └─ app.module.ts
 ├─ package.json
 └─ README.md
+
+
 
