@@ -96,3 +96,48 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+# Tarea 6: Mi Primera API REST con NestJS
+
+## 📌 Descripción
+
+Este proyecto consiste en la implementación de una **API REST** utilizando **NestJS**, aplicando la **arquitectura por capas** (Controller, Service, DTOs y Entity).  
+El objetivo es demostrar la comprensión de la separación de responsabilidades y el manejo de un recurso (`Producto`) en memoria, sin base de datos.  
+
+El proyecto incluye un **CRUD completo** con los cinco endpoints fundamentales:  
+- Crear un producto  
+- Listar todos los productos  
+- Ver un producto por ID  
+- Actualizar un producto  
+- Eliminar un producto  
+
+Se utilizó un **array en memoria** para simular la base de datos, cumpliendo con los requisitos de la tarea.
+
+---
+
+## 🛠 Tecnologías y Dependencias
+
+- **Node.js** v18+  
+- **NestJS** v10+  
+- **TypeScript**  
+- **class-validator** (para validaciones de DTOs)  
+- **Postman o Insomnia** (para probar la API)  
+
+---
+
+## 📁 Estructura del Proyecto
+
+```text
+tarea6-api/
+├─ src/
+│  ├─ productos/
+│  │  ├─ dto/
+│  │  │  ├─ create-producto.dto.ts
+│  │  │  └─ update-producto.dto.ts
+│  │  ├─ entities/
+│  │  │  └─ producto.entity.ts
+│  │  ├─ productos.controller.ts
+│  │  └─ productos.service.ts
+│  └─ app.module.ts
+├─ package.json
+└─ README.md
